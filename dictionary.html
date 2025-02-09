@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary | Parable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Parable.</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="stories.html">Stories</a></li>
+                <li><a href="dictionary.html">Dictionary</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dictionary-section">
+        <h1>Dictionary</h1>
+        <input type="text" id="wordInput" placeholder="Add a new word..." />
+        <button class="btn" onclick="addWord()">Add Word</button>
+        
+        <div class="word-container" id="wordContainer">
+            <!-- Words will be added dynamically here -->
+        </div>
+
+        <div id="wordPopup" class="word-popup hidden">
+            <p id="wordMeaning"></p>
+            <button class="btn close-btn" onclick="closePopup()">Close</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
