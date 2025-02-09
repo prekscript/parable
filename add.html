@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories | Parable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="fade-in">
+        <div class="logo">Parable.</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="stories.html">Stories</a></li>
+                <li><a href="dictionary.html">Dictionary</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="story-section">
+        <div class="chat-story-container">
+            <div class="chat-box" id="chatBox" contenteditable="true" oninput="liveUpdateStory()">
+                Once upon a time, in a distant land...
+            </div>
+            <button class="btn" onclick="addToStory()">Submit</button>
+        </div>
+    </main>
+
+    <script>
+        function liveUpdateStory() {
+            const chatBox = document.getElementById("chatBox");
+            sessionStorage.setItem("liveStory", chatBox.innerHTML);
+        }
+
+        function addToStory() {
+            const chatBox = document.getElementById("chatBox");
+            localStorage.setItem("savedStory", chatBox.innerHTML);
+        }
+
+        window.onload = function() {
+            const savedStory = localStorage.getItem("savedStory");
+            if (savedStory) {
+                document.getElementById("chatBox").innerHTML = savedStory;
+            }
+        }
+    </script>
+    </body>
+</html>
