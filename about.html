@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Parable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="fade-in">
+        <div class="logo">Parable.</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="stories.html">Stories</a></li>
+                <li><a href="dictionary.html">Dictionary</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="about-section">
+        <h1 class="fade-in">About <span class="highlight">Parable</span></h1>
+        <p class="fade-in delay">
+            Parable is a platform where stories and words from various languages come together.  
+            Discover, learn, and share experiences that connect the world.
+        </p>
+
+        <div class="about-content">
+            <div class="about-card scroll-reveal">
+                <h2>📖 Share Your Stories</h2>
+                <p>Contribute to collaborative storytelling with a diverse global community.</p>
+            </div>
+
+            <div class="about-card scroll-reveal">
+                <h2>🌎 Explore New Words</h2>
+                <p>Learn unique words from different languages and their cultural significance.</p>
+            </div>
+
+            <div class="about-card scroll-reveal">
+                <h2>🤝 Join the Community</h2>
+                <p>Connect with like-minded individuals who love storytelling and languages.</p>
+            </div>
+        </div>
+
+        <a href="join.html" class="btn fade-in delay">Join Us</a>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".scroll-reveal");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

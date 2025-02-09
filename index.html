@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Parable.</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="stories.html">Stories</a></li>
+                <li><a href="dictionary.html">Dictionary</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="landing">
+        <h1>your best stories could start <br> with a <span class="highlight">sentence.</span></h1>
+        <a href="stories.html" class="btn">Start Writing</a>
+    </main>
+
+    <main class="about-section">
+        <h1 class="fade-in">About <span class="highlight">Parable</span></h1>
+        <p class="fade-in delay">Parable is a platform where stories and words from various languages come together. Discover, learn, and share experiences that connect the world.</p>
+
+        <div class="about-content">
+            <div class="about-card scroll-reveal">
+                <h2>📖 Share Your Stories</h2>
+                <p>Contribute to collaborative storytelling with a diverse global community.</p>
+            </div>
+            <div class="about-card scroll-reveal">
+                <h2>🌎 Explore New Words</h2>
+                <p>Learn unique words from different languages and their cultural significance.</p>
+            </div>
+            <div class="about-card scroll-reveal">
+                <h2>🤝 Join the Community</h2>
+                <p>Connect with like-minded individuals who love storytelling and languages.</p>
+            </div>
+        </div>
+        <a href="join.html" class="btn fade-in delay">Join Us</a>
+    </main>
+
+    <main class="story-section">
+        <h1>Share Your Story</h1>
+        <textarea placeholder="Start your story here..."></textarea>
+        <button class="btn">Submit</button>
+
+        <h2>Community Stories</h2>
+        <div class="story-list">
+            <div class="story-card">
+                <h3>Once upon a time...</h3>
+                <p>A magical journey began...</p>
+            </div>
+            <div class="story-card">
+                <h3>A dark night...</h3>
+                <p>Everything changed with a single knock...</p>
+            </div>
+        </div>
+    </main>
+
+    <main class="dictionary-section">
+        <h1>Dictionary</h1>
+        <input type="text" id="wordInput" placeholder="Add a new word..." />
+        <button class="btn" onclick="addWord()">Add Word</button>
+
+        <div class="word-container" id="wordContainer"></div>
+
+        <div id="wordPopup" class="word-popup hidden">
+            <p id="wordMeaning"></p>
+            <button class="btn close-btn" onclick="closePopup()">Close</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
